@@ -1,0 +1,343 @@
+function createForm() {
+  // Create a new form, then add a checkbox question, a multiple choice question,
+// a page break, then a date question and a grid of questions.
+var form = FormApp.create('New GL Request-PROD');
+
+  var ss = SpreadsheetApp.getActive();
+  var names = ss.getSheetByName("FormData");
+  form.setCollectEmail(true);
+  form.setDescription("Put your answers for each question in the box below the question.")
+  
+  
+  form.addPageBreakItem()
+      .setTitle("Untitled")
+      .setGoToPage(FormApp.PageNavigationType.CONTINUE);
+  
+ 
+  
+  // GL Description 
+  form.addTextItem()
+      .setTitle('GL Description')
+      .setRequired(true)
+      .setHelpText("Enter a brief description for the Visual GL");
+  
+  
+  var adaptiveValues = names.getRange(2, 14, names.getMaxRows() - 1,3).getValues();
+  // Adaptive / Sharepoint Department
+  var AdaptiveDepartments = [];
+   j = 1;
+  AdaptiveDepartments[0] = adaptiveValues[0][0];
+  for(var i = 1; i < adaptiveValues.length; i++)    
+    if(adaptiveValues[i][0] != adaptiveValues[i-1][0] && adaptiveValues[i][0]!=""){
+      AdaptiveDepartments[j] = adaptiveValues[i][0];
+      j++;
+    }
+  
+  form.addListItem()
+      .setTitle('Department (Adaptive Planning/Sharepoint)')
+      .setRequired(true)
+     .setHelpText("Select a Department from Adpative/Sharepoint list")
+     .setChoiceValues(AdaptiveDepartments);
+      
+  
+  // Adaptive / Sharepoint Level
+  var AdaptiveLevels = [];
+   j = 1;
+  AdaptiveLevels[0] = adaptiveValues[0][1];
+  for(var i = 1; i < adaptiveValues.length; i++)    
+    if(adaptiveValues[i][1] != adaptiveValues[i-1][1] && adaptiveValues[i][1]!=""){
+      AdaptiveLevels[j] = adaptiveValues[i][1];
+      j++;
+    }
+  
+  form.addListItem()
+      .setTitle('Level (Adaptive Planning/Sharepoint)')
+      .setRequired(true)
+     .setHelpText("Select a Level from Adpative/Sharepoint list")
+     .setChoiceValues(AdaptiveLevels);
+
+      
+  
+  
+  // Adaptive / Sharepoint Financial Statement Section
+   var AdaptiveSections = [];
+   j = 1;
+  AdaptiveSections[0] = adaptiveValues[0][2];
+  for(var i = 1; i < adaptiveValues.length; i++)    
+    if(adaptiveValues[i][2] != adaptiveValues[i-1][2] && adaptiveValues[i][1]!=""){
+      AdaptiveSections[j] = adaptiveValues[i][2];
+      j++;
+    }
+  
+  form.addListItem()
+      .setTitle('Financial Statement Section (Adaptive Planning/Sharepoint)')
+      .setRequired(true)
+      .setHelpText("Select a Financial Statement Section from Adpative/Sharepoint list")
+      .setChoiceValues(AdaptiveSections);
+  
+  
+    
+  
+  // Department and Cost Centers
+  var namesValues = names.getRange(2, 2, names.getMaxRows() - 1,12).getValues();
+  var departments = [];
+
+  //// Get department values from FormData sheet
+  j = 1;
+  departments[0] = namesValues[0][0];
+  for(var i = 1; i < namesValues.length; i++)    
+    if(namesValues[i][0] != namesValues[i-1][0] && namesValues[i][0]!=""){
+      departments[j] = namesValues[i][0];
+      j++;
+    }
+  
+  var dept = form.addListItem()
+                 .setTitle('Select Department (FINDW)')
+                 .setRequired(true)
+                 .setHelpText("Select the department for the new GL");
+  var deptChoices = [];
+  
+  
+  
+  // New section for Project
+  var projects = [];
+  for (i=0; i<namesValues.length; i++){
+    if(namesValues[i][6]!="")
+      projects[i] = namesValues[i][6];
+  }
+  var projectPage = form.addPageBreakItem().setTitle('Project (Adaptive Planning/Sharepoint)'); 
+  form.addListItem()
+      .setTitle('Select Project')
+      .setChoiceValues(projects)
+      .setRequired(true);
+  
+// Summary A1
+  var summaryA1 = [];
+  for (i=0; i<namesValues.length; i++){
+    if(namesValues[i][7]!="")
+      summaryA1[i] = namesValues[i][7];
+  }
+  var summaryA1Page= form.addPageBreakItem()
+      .setTitle('Summary A1 Revised (Consolidations)');
+  form.addListItem()
+      .setTitle('Select Summary A1')
+      .setChoiceValues(summaryA1)
+      .setRequired(true);
+  
+  
+  //Summary A2
+   var summaryA2 = [];
+  summaryA2[0] = namesValues[0][8];
+  for (i=1; i<namesValues.length; i++){
+    if(namesValues[i][8]!="")
+      summaryA2[i] = namesValues[i][8];
+  }
+  form.addPageBreakItem()
+      .setTitle('Summary A2 Revised (Consolidations) ');
+  form.addListItem()
+      .setTitle('Select SummaryA2')
+      .setChoiceValues(summaryA2)
+      .setRequired(true);
+  
+  
+  //Product
+  var products = [];
+  for (i=0; i<namesValues.length; i++){
+    if(namesValues[i][9]!="")
+      products[i] = namesValues[i][9];
+  }
+  form.addPageBreakItem()
+      .setTitle('Product (Adaptive Planning/Sharepoint)');
+  form.addListItem()
+      .setTitle('Select Product')
+      .setChoiceValues(products)
+      .setRequired(true);
+  
+  
+  //Location
+  var locations = [];
+  for (i=0; i<namesValues.length; i++){
+     if(namesValues[i][10]!="")
+       locations[i] = namesValues[i][10];
+  }
+  form.addPageBreakItem()
+      .setTitle('Location (Adaptive Planning/Sharepoint)');
+  form.addListItem()
+      .setTitle('Select Location')
+      .setChoiceValues(locations)
+      .setRequired(true);
+  
+  
+  //Line of Business
+  var lobs = [];
+  lobs[0] = namesValues[0][11];
+  for (i=1; i<namesValues.length; i++){
+    if(namesValues[i][11]!="")
+      lobs[i] = namesValues[i][11];
+  }
+  form.addPageBreakItem()
+      .setTitle('LOB (Adaptive Planning/Sharepoint)');
+     // .setGoToPage(FormApp.PageNavigationType.SUBMIT);
+  form.addListItem()
+      .setTitle('Select Line of Business')
+      .setChoiceValues(lobs)
+      .setRequired(true);
+
+  
+  
+  
+  //Financial Statement & Financial Satement Section
+  var statementPage = form.addPageBreakItem()
+                          .setTitle('Financial Statement')
+                          .setGoToPage(FormApp.PageNavigationType.SUBMIT);
+  var statement = form.addListItem()
+                      .setTitle('Select Financial Statement')
+                      .setRequired(true);
+  var stateChoices=[];
+  var statements = [];
+  j = 1;
+  statements[0] = namesValues[0][2];
+  for(var i = 1; i < namesValues.length; i++)    
+    if(namesValues[i][2] != namesValues[i-1][2] && namesValues[i][2]!=""){
+      statements[j] = namesValues[i][2];
+      j++;
+    }
+  
+  for (k=0;k<statements.length; k++){
+    var newPage = form.addPageBreakItem()
+                      .setTitle(statements[k] &" (Consolidations)");
+    var stateChoice = statement.createChoice(statements[k], newPage); 
+  
+    ////Financial Statement choices and go to page based on answers
+    stateChoices.push(stateChoice);
+    
+    ////Set up dropdown list for each Financial Statement Section
+    var sections = [];
+    var x = 1;
+    if  (namesValues[0][2] == statements[k]){
+        sections[0] = namesValues[0][3];
+    }
+    else {x=0;}
+    
+    for(var i = 1; i < namesValues.length; i++) {   
+      if (namesValues[i][2] == statements[k] && namesValues[i][3] != namesValues[i-1][3] && namesValues[i][3]!=""){
+        sections[x] = namesValues[i][3];  
+        x++;
+      }  
+     
+    }
+     var newSec = form.addListItem()
+                      .setTitle('Select Financial Statement Section')
+                      .setChoiceValues(sections)
+                      .setRequired(true);
+    
+    // Natural Account Grouping
+    var newGroupChoices = [];
+    for (var a=0; a<sections.length; a++){
+    var newGroup = form.addPageBreakItem()
+                       .setTitle(sections[a]);
+                       
+    
+    newGroupChoices.push(newSec.createChoice(sections[a], newGroup)); 
+    var groups = [];
+    x = 1;
+    if  (namesValues[0][3] == sections[a]){
+        groups[0] = namesValues[0][4];
+    }
+    else {x=0;}
+    
+     for(var i = 1; i < namesValues.length; i++) {   
+      if (namesValues[i][3] == sections[a] && namesValues[i][4] != namesValues[i-1][4] && namesValues[i][4]!=""){
+        groups[x] = namesValues[i][4];  
+        x++;
+      }  
+    
+    }
+
+    var newGroupSec = form.addListItem()
+          .setTitle('Select Natural Account Grouping')
+          .setChoiceValues(groups)
+          .setRequired(true);
+      
+    
+      // Natural Account 
+      var AcctChoices = [];
+      for (var b=0; b<groups.length; b++){
+        var newAcct = form.addPageBreakItem()
+                       .setTitle(groups[b])
+        .setHelpText("Select a Natural Account where the new GL would roll up to.")
+        .setGoToPage(projectPage);
+    
+        AcctChoices.push(newSec.createChoice(groups[b], newAcct)); 
+        var accounts = [];
+        x = 1;
+        if  (namesValues[0][4] == groups[b]){
+          accounts[0] = namesValues[0][5];
+        }
+        else {x=0;}
+    
+        for(var i = 1; i < namesValues.length; i++) {   
+          if (namesValues[i][4] == groups[b] && namesValues[i][5] != namesValues[i-1][5] && namesValues[i][5]!=""){
+            accounts[x] = namesValues[i][5];  
+            x++;
+          }  
+    
+        }
+
+        form.addListItem()
+        .setTitle('Select Natural Account')
+        .setChoiceValues(accounts)
+        .setRequired(true);
+      }
+      newGroupSec.setChoices(AcctChoices);
+    }
+    newSec.setChoices(newGroupChoices);
+  }
+  statement.setChoiceValues(statements);
+  
+  ////set choices for Financial Statement dropdown list
+  statement.setChoices(stateChoices);
+  
+
+
+  
+  
+  // Create Cost Centers
+  for (var k=0; k< departments.length; k++){ 
+    var newPage = form.addPageBreakItem()
+                      .setTitle(departments[k])
+                      .setGoToPage(statementPage); 
+    var choice = dept.createChoice(departments[k], newPage);
+    
+    ////department choices and go to page based on answers
+    deptChoices.push(choice);
+    
+    ////Set up dropdown list for each Cost Center
+    var costCenters = [];
+    x = 1;
+    if  (namesValues[0][0] == departments[k]){
+        costCenters[0] = namesValues[0][1];
+    }
+    else {x=0;}
+    
+    for(var i = 1; i < namesValues.length; i++) {   
+      if (namesValues[i][0] == departments[k] && namesValues[i][1] != namesValues[i-1][1]){
+        costCenters[x] = namesValues[i][1];  
+        x++;
+      }  
+     
+    }
+     form.addListItem()
+          .setTitle('Select Cost Center')
+          .setChoiceValues(costCenters)
+          .setRequired(true);
+  }
+  
+  ////set choices for Select Department dropdown list
+  dept.setChoices(deptChoices);
+  
+  
+  form.addPageBreakItem()
+      .setGoToPage(statementPage);
+} 
+  
