@@ -36,7 +36,7 @@ var form = FormApp.create('New Google Form');
     //Region choices and go to page based on answers
     regionChoices.push(regionChoice);
     
-    ////Set up dropdown list for each Financial Statement Section
+    ////Set up dropdown list for each subregion Section
     var subregions = [];
     var x = 1;
     if  (values[0][0] == regions[k]){
@@ -90,7 +90,7 @@ var form = FormApp.create('New Google Form');
   }
   region.setChoiceValues(regions);
   
-  ////set choices for Financial Statement dropdown list
+  ////set choices for Region dropdown list
   region.setChoices(regionChoices);
  
 } 
