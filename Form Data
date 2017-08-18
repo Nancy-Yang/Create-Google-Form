@@ -1,0 +1,230 @@
+Region	Subregions	Countries
+Africa	Eastern Africa	Burundi
+Africa	Eastern Africa	Comoros
+Africa	Eastern Africa	Djibouti
+Africa	Eastern Africa	Eritrea
+Africa	Eastern Africa	Ethiopia
+Africa	Eastern Africa	Kenya
+Africa	Eastern Africa	Madagascar
+Africa	Eastern Africa	Malawi
+Africa	Eastern Africa	Mauritius
+Africa	Eastern Africa	Mayotte
+Africa	Eastern Africa	Mozambique
+Africa	Eastern Africa	Reunion
+Africa	Eastern Africa	Rwanda
+Africa	Eastern Africa	Seychelles
+Africa	Eastern Africa	Somalia
+Africa	Eastern Africa	Tanzania, United Republic of
+Africa	Eastern Africa	Uganda
+Africa	Eastern Africa	Zambia
+Africa	Eastern Africa	Zimbabwe
+Africa	Middle Africa	Angola
+Africa	Middle Africa	Cameroon
+Africa	Middle Africa	Central African Republic
+Africa	Middle Africa	Chad
+Africa	Middle Africa	Congo (Brazzaville)
+Africa	Middle Africa	Congo, Democratic Republic of the
+Africa	Middle Africa	Equatorial Guinea
+Africa	Middle Africa	Gabon
+Africa	Middle Africa	Sao Tome and Principe
+Africa	Northern Africa	Algeria
+Africa	Northern Africa	Egypt
+Africa	Northern Africa	Libyan Arab Jamahiriya
+Africa	Northern Africa	Morroco
+Africa	Northern Africa	South Sudan
+Africa	Northern Africa	Sudan
+Africa	Northern Africa	Tunisia
+Africa	Northern Africa	Western Sahara
+Africa	Southern Africa	Botswana
+Africa	Southern Africa	Lesotho
+Africa	Southern Africa	Namibia
+Africa	Southern Africa	South Africa
+Africa	Southern Africa	Swaziland
+Africa	Western Africa	Benin
+Africa	Western Africa	Burkina Faso
+Africa	Western Africa	Cape Verde
+Africa	Western Africa	Cote d'Ivoire (Ivory Coast)
+Africa	Western Africa	Gambia
+Africa	Western Africa	Ghana
+Africa	Western Africa	Guinea
+Africa	Western Africa	Guinea-Bissau
+Africa	Western Africa	Liberia
+Africa	Western Africa	Mali
+Africa	Western Africa	Mauritania
+Africa	Western Africa	Niger
+Africa	Western Africa	Nigeria
+Africa	Western Africa	Saint Helena
+Africa	Western Africa	Senegal
+Africa	Western Africa	Sierra Leone
+Africa	Western Africa	Togo
+Americas	Caribbean	Anguilla
+Americas	Caribbean	Antigua and Barbuda
+Americas	Caribbean	Aruba
+Americas	Caribbean	Bahamas
+Americas	Caribbean	Barbados
+Americas	Caribbean	Bonaire, Saint Eustatius and Saba
+Americas	Caribbean	British Virgin Islands
+Americas	Caribbean	Cayman Islands
+Americas	Caribbean	Cuba
+Americas	Caribbean	Curaçao
+Americas	Caribbean	Dominica
+Americas	Caribbean	Dominican Republic
+Americas	Caribbean	Grenada
+Americas	Caribbean	Guadeloupe
+Americas	Caribbean	Haiti
+Americas	Caribbean	Jamaica
+Americas	Caribbean	Martinique
+Americas	Caribbean	Monserrat
+Americas	Caribbean	Puerto Rico
+Americas	Caribbean	Saint-Barthélemy
+Americas	Caribbean	St. Kitts and Nevis
+Americas	Caribbean	Saint Lucia
+Americas	Caribbean	Saint Martin
+Americas	Caribbean	Saint Vincent and the Grenadines
+Americas	Caribbean	Sint Maarten
+Americas	Caribbean	Trinidad and Tobago
+Americas	Caribbean	Turks and Caicos Islands
+Americas	Caribbean	Virgin Islands (US)
+Americas	Central America	Belize
+Americas	Central America	Costa Rica
+Americas	Central America	El Salvador
+Americas	Central America	Guatemala
+Americas	Central America	Honduras
+Americas	Central America	Mexico
+Americas	Central America	Nicaragua
+Americas	Central America	Panama
+Americas	South America	Argentina
+Americas	South America	Bolivia
+Americas	South America	Brazil
+Americas	South America	Chile
+Americas	South America	Colombia
+Americas	South America	Ecuador
+Americas	South America	Falkland Islands (Malvinas)
+Americas	South America	French Guiana
+Americas	South America	Guyana
+Americas	South America	Paraguay
+Americas	South America	Peru
+Americas	South America	Suriname
+Americas	South America	Uruguay
+Americas	South America	Venezuela
+Americas	North America	Bermuda
+Americas	North America	Canada
+Americas	North America	Greenland
+Americas	North America	Saint Pierre and Miquelon
+Americas	North America	United States
+Asia	Southeast Asia	Indonesia
+Asia	Southeast Asia	Thailand
+Asia	Southeast Asia	Philippines
+Asia	Southeast Asia	Malaysia
+Asia	Southeast Asia	Vietnam
+Asia	Southeast Asia	Singapore
+Asia	Southeast Asia	Myanmar / Burma
+Asia	Southeast Asia	Cambodia
+Asia	Southeast Asia	Laos
+Asia	Southeast Asia	Brunei
+Asia	Southeast Asia	East Timor
+Asia	East Asia	China
+Asia	East Asia	Japan
+Asia	East Asia	Hong Kong
+Asia	East Asia	South Korea
+Asia	East Asia	North Korea
+Asia	East Asia	Mongolia
+Asia	South Asia	India
+Asia	South Asia	Pakistan
+Asia	South Asia	Bangladesh
+Asia	South Asia	Sri Lanka
+Asia	South Asia	Nepal
+Asia	South Asia	Bhutan
+Asia	South Asia	Maldives
+Asia	Middle East	Turkey
+Asia	Middle East	Saudi Arabia
+Asia	Middle East	Iran
+Asia	Middle East	United Arab Emirates
+Asia	Middle East	Israel
+Asia	Middle East	Iraq
+Asia	Middle East	Qatar
+Asia	Middle East	Oman
+Asia	Middle East	Syria
+Asia	Middle East	Azerbaijan
+Asia	Middle East	Jordan
+Asia	Middle East	Yemen
+Asia	Middle East	Lebanon
+Asia	Middle East	Palestine
+Asia	Middle East	Kuwait
+Asia	Middle East	Bahrain
+Asia	Middle East	Georgia
+Asia	Middle East	Armenia
+Asia	Central Asia	Russia
+Asia	Central Asia	Afghanistan
+Asia	Central Asia	Iran
+Asia	Central Asia	Pakistan
+Asia	Central Asia	Kazakhstan
+Asia	Central Asia	Uzbekistan
+Asia	Central Asia	Mongolia
+Asia	Central Asia	Kyrgyzstan
+Asia	Central Asia	Tajikistan
+Asia	Central Asia	Turkmenistan
+Europe	Scandinavia	Iceland
+Europe	Scandinavia	Norway
+Europe	Scandinavia	Sweden
+Europe	Scandinavia	Finland
+Europe	Scandinavia	Denmark
+Europe	the British Isles	the United Kindom
+Europe	the British Isles	Ireland
+Europe	Western Europe	France
+Europe	Western Europe	Belgium
+Europe	Western Europe	the Netherlands
+Europe	Western Europe	Luxembourg
+Europe	Western Europe	Monaco
+Europe	Southern Europe	Portugal
+Europe	Southern Europe	Spain
+Europe	Southern Europe	Andorra
+Europe	Southern Europe	Italy
+Europe	Southern Europe	Malta
+Europe	Southern Europe	Sam Marino
+Europe	Southern Europe	Vatican City
+Europe	Central Europe	Germany
+Europe	Central Europe	Switzerland
+Europe	Central Europe	Liechtenstein
+Europe	Central Europe	Austria
+Europe	Central Europe	Poland
+Europe	Central Europe	the Czech Republic
+Europe	Central Europe	Slovakia
+Europe	Central Europe	Hanguary
+Europe	Southeastern Europe	Slovenia
+Europe	Southeastern Europe	Croatia
+Europe	Southeastern Europe	Bosnia
+Europe	Southeastern Europe	Herzegovina
+Europe	Southeastern Europe	Serbia
+Europe	Southeastern Europe	Montenegro
+Europe	Southeastern Europe	Albania
+Europe	Southeastern Europe	Macedonia
+Europe	Southeastern Europe	Romania
+Europe	Southeastern Europe	Bulgaria
+Europe	Southeastern Europe	Greece
+Europe	Southeastern Europe	Turkey
+Europe	Eastern Europe	Estonia
+Europe	Eastern Europe	Latvia
+Europe	Eastern Europe	Lithuania
+Europe	Eastern Europe	Belarus
+Europe	Eastern Europe	Ukraine
+Europe	Eastern Europe	Moldova
+Europe	Eastern Europe	Russia
+Europe	Eastern Europe	Georgia
+Europe	Eastern Europe	Armenia
+Europe	Eastern Europe	Azerbaijan
+Oceania	Oceania	Australia
+Oceania	Oceania	Fiji
+Oceania	Oceania	French Polynesia
+Oceania	Oceania	Guam
+Oceania	Oceania	Kiribati
+Oceania	Oceania	Marshall Islands
+Oceania	Oceania	Micronesia
+Oceania	Oceania	New Caledonia
+Oceania	Oceania	New Zealand
+Oceania	Oceania	Papua New Guinea
+Oceania	Oceania	Samoa
+Oceania	Oceania	Samoa, American
+Oceania	Oceania	Solomon, Islands
+Oceania	Oceania	Tonga
+Oceania	Oceania	Vanuatu
